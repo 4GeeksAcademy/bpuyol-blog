@@ -1,0 +1,111 @@
+@import url('https://fonts.cdnfonts.com/css/star-wars');
+
+body {
+    background: #132430;
+
+}  
+  
+  @media (min-width: 1200px) {
+    span.container-title {
+      font-size: 50px;
+    }
+  }
+  
+  @media (max-width: 728px) {
+    span.container-title {
+      font-size: 15px;
+    }
+  }
+
+  .container-title{
+    color: rgb(198, 201, 36);
+}
+
+/* .card{
+    background-image: 
+    linear-gradient(to right, #615302, #645816, #b3a31699, #615302),
+    linear-gradient(to right, #615302, #645816, #b3a31699, #615302);
+    background-size: 200% 100%; 
+    animation: moveBackground 20s linear infinite;
+} */
+
+.base {
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
+  
+  
+  .card-title {
+      border-top: 1px solid #2020207d; 
+      border-bottom: 1px solid #2020207d;
+      padding: 10px; 
+      font-size: x-large;
+      color: #283003;
+      text-shadow: 1px 4px 5px #bba9b7;
+      font-weight:bold;
+  }
+  
+
+  .overflow-auto {
+    overflow-x: scroll;
+    white-space: nowrap;
+    scrollbar-width: thin; 
+   
+  }
+  
+  .overflow-auto::-webkit-scrollbar {
+    width: 10px; 
+  }
+
+
+  .text-gradient {
+    color: #ffd700;   
+    background-clip: text;
+    background-size: 500%; 
+    font-size: 4rem;
+
+    justify-content: center;
+    font-family: 'Star Wars', sans-serif;
+    letter-spacing: 8px;
+    -webkit-text-stroke-width: 0px;
+    -webkit-text-stroke-color: #0a0a0a;
+       
+}
+
+
+@media (max-width: 768px) {
+    .img-starwars {
+      width: 60px;
+      height: 60px;
+
+  }
+}
+
+.img-starwars {
+    position: relative;
+    z-index: 2;
+}
+
+.dropdown {
+    position: relative;
+    z-index: 2;
+}
+
+@keyframes color {
+    from {
+        background-position: 0% 50%;
+    }
+
+    to {
+        background-position: 100% 50%;
+    }
+  }
+
+@keyframes moveBackground {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 200% 0; 
+    }
+  }

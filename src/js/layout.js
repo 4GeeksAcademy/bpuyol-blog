@@ -3,12 +3,17 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 
 import { Home } from "./views/home";
-import { Demo } from "./views/demo";
-import { Single } from "./views/single";
+import { Login } from "./views/login";
+import { SignUp } from "./views/signup";
+
+import { PeopleDetails } from "./views/peopledetails";
+import { PlanetsDetails } from "./views/planetsdetails";
+import { StarshipsDetails } from "./views/starshipsdetails";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
+
 
 //create your first component
 const Layout = () => {
@@ -23,8 +28,11 @@ const Layout = () => {
 					<Navbar />
 					<Routes>
 						<Route path="/" element={<Home />} />
-						<Route path="/demo" element={<Demo />} />
-						<Route path="/single/:theid" element={<Single />} />
+						<Route path="/peopledetails/:uid" element={<PeopleDetails />} />
+						<Route path="/planetsdetails/:uid" element={<PlanetsDetails />} />
+						<Route path="/starshipsdetails/:uid" element={<StarshipsDetails />} />
+						<Route path="/login" element={<Login />} />
+						<Route path="/signup" element={<SignUp />} />
 						<Route path="*" element={<h1>Not found!</h1>} />
 					</Routes>
 					<Footer />
@@ -33,5 +41,6 @@ const Layout = () => {
 		</div>
 	);
 };
+
 
 export default injectContext(Layout);
